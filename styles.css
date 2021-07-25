@@ -55,19 +55,6 @@ body .navbar .shop {
   padding: 10px;
 }
 
-body .navbar .fancy-undeline {
-  background-image: linear-gradient(120deg, #757F9A, #D7DDE8 100%);
-  background-repeat: no-repeat;
-  background-size: 100% 0.1em;
-  background-position: 0 70%;
-  -webkit-transition: background-size 0.25s ease-in;
-  transition: background-size 0.25s ease-in;
-}
-
-body .navbar .fancy-undeline:hover {
-  background-size: 100% 10% !important;
-}
-
 body main {
   min-height: 90vh;
 }
@@ -164,27 +151,26 @@ body .feature .brands .card {
       -ms-flex-align: center;
           align-items: center;
   width: 15%;
-  height: 100px;
-  border: 1px solid;
+  height: 150px;
+  border: 1px solid #222831;
   padding: 10px;
-  -webkit-box-shadow: 5px 10px;
-          box-shadow: 5px 10px;
+  -webkit-box-shadow: 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   border-radius: 5px;
   color: #222831;
   cursor: pointer;
-  -webkit-transition: -webkit-transform .2s;
-  transition: -webkit-transform .2s;
-  transition: transform .2s;
-  transition: transform .2s, -webkit-transform .2s;
 }
 
 body .feature .brands .card:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-box-shadow: 10px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 body .feature .brands .card img {
-  width: 100px;
+  padding: 5px;
+  width: 100%;
 }
 
 body .image-slider {
@@ -202,7 +188,8 @@ body .image-slider p {
 
 body .image-slider .slider {
   width: 100%;
-  border: 10px solid #222831;
+  -webkit-box-shadow: 5px 10px rgba(34, 40, 49, 0.2);
+          box-shadow: 5px 10px rgba(34, 40, 49, 0.2);
   margin: 20px auto;
   position: relative;
   overflow: hidden;
@@ -354,11 +341,55 @@ body .showBtn {
           transform: translateY(0);
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
-  body {
-    padding: 20px 20px 0px 20px;
+@media (min-width: 1025px) {
+  .feature {
+    margin-top: 50px;
   }
-  section .brands {
+  .navbar {
+    padding: 0px 0 20px 0;
+  }
+  .navbar .fancy-undeline {
+    background-image: linear-gradient(120deg, #757F9A, #D7DDE8 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.1em;
+    background-position: 0 70%;
+    -webkit-transition: background-size 0.25s ease-in;
+    transition: background-size 0.25s ease-in;
+  }
+  .navbar .fancy-undeline:hover {
+    background-size: 100% 10% !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    padding: 30px 10px 0 10px;
+  }
+  .navbar {
+    padding: 0px 0 20px 0;
+  }
+  .navbar .fancy-undeline {
+    background-image: linear-gradient(120deg, #757F9A, #D7DDE8 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.1em;
+    background-position: 0 70%;
+    -webkit-transition: background-size 0.25s ease-in;
+    transition: background-size 0.25s ease-in;
+  }
+  .navbar .fancy-undeline:hover {
+    background-size: 100% 10% !important;
+  }
+  .feature {
+    padding-bottom: 20px !important;
+    margin-top: 50px;
+  }
+  .feature p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 30px !important;
+    font-weight: bold;
+  }
+  .feature .brands {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -370,12 +401,164 @@ body .showBtn {
         -ms-flex-align: center;
             align-items: center;
   }
-  section .brands .card {
+  .feature .brands .card {
+    width: 25% !important;
+    margin-bottom: 20px;
+  }
+  .feature .brands .card img {
+    padding: 5px;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .image-slider p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 30px !important;
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  body {
+    padding: 10px 0px 0px 0px;
+    margin: 0 auto;
+  }
+  .navbar {
+    padding: 10px 10px 10px 10px;
+  }
+  .navbar .fancy-undeline {
+    background-image: linear-gradient(120deg, #757F9A, #D7DDE8 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.1em;
+    background-position: 0 70%;
+    -webkit-transition: background-size 0.25s ease-in;
+    transition: background-size 0.25s ease-in;
+  }
+  .navbar .fancy-undeline:hover {
+    background-size: 100% 10% !important;
+  }
+  .feature {
+    width: 95%;
+    margin: 40px auto 20px auto;
+    padding-bottom: 0px !important;
+  }
+  .feature .brands {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .feature .brands .card {
     min-width: 75%;
     margin-bottom: 20px;
   }
+  .feature .brands .card img {
+    padding: 5px;
+    max-width: 50%;
+    max-height: 100%;
+  }
+  .image-slider {
+    width: 95%;
+    margin: 40px auto 20px auto;
+  }
+  footer {
+    display: block;
+  }
+  .links {
+    width: 300px;
+  }
+  .socials {
+    width: 100%;
+    display: block;
+  }
+  .socials .social-links {
+    width: 100%;
+  }
   .social-links {
     display: block;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  * {
+    font-size: 16px;
+  }
+  body {
+    padding: 10px 0px 0px 0px;
+  }
+  .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .navbar .name {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar .shop {
+    display: none !important;
+  }
+  .feature {
+    padding-bottom: 20px !important;
+    margin-top: 50px;
+  }
+  .feature p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 30px !important;
+    font-weight: bold;
+  }
+  .feature .brands {
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .feature .brands .card {
+    min-width: 75%;
+    margin-bottom: 20px;
+  }
+  .feature .brands .card img {
+    max-width: 50%;
+    max-height: 100%;
+  }
+  .image-slider p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 30px !important;
+    font-weight: bold;
+  }
+  footer {
+    display: block !important;
+    text-align: center;
+  }
+  footer .links,
+  footer .socials {
+    display: block;
+    width: 100%;
+  }
+  footer .socials {
+    width: 100%;
+    display: block;
+  }
+  footer .socials .social-links {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
