@@ -1,8 +1,8 @@
-let slides = document.querySelector('.slider-items').children;
-let nextSlide = document.querySelector(".right-slide");
-let prevSlide = document.querySelector(".left-slide");
-let totalSlides = slides.length;
-let index = 0;
+const slides = document.querySelector('.slider-items').children;
+const nextSlide = document.querySelector(".right-slide");
+const prevSlide = document.querySelector(".left-slide");
+const totalSlides = slides.length;
+const index = 0;
 
 nextSlide.onclick=function () {
     next("next");
